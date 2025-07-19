@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('graduation-bge.jpeg') no-repeat center center/cover;
+  position: relative;
+  height: 100vh;
+}
+
+.login-wrapper {
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 400px;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.remember {
+  text-align: left;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.btn {
+  width: 95%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in {
+  background-color: #d93b3b;
+}
+
+.register {
+  background-color: #2c8c2c;
+}
+
+.forgot {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #f9e8d2;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #d93b3b;
+}
+
+.social {
+  margin-top: 10px;
+}

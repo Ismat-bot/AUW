@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration - Asian University for Women</title>
+  <link rel="stylesheet" href="registration1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Asian University for Women">
+      <span>ASIAN UNIVERSITY FOR WOMEN</span>
+    </div>
+    <div class="user-info">
+      <span>👤 nobody ▾</span>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="registration-form">
+      <div class="form-header">Registration Information</div>
+      <form action="/submit-registration" method="POST">
+        <input type="email" name="email" placeholder="📧 Email ID" required>
+        <input type="text" name="first_name" placeholder="🧾 First Name" required>
+        <input type="text" name="middle_name" placeholder="🧾 Middle Name">
+        <input type="text" name="last_name" placeholder="🧾 Last Name" required>
+        <input type="password" name="password" placeholder="🔒 Password" required>
+        <input type="password" name="confirm_password" placeholder="🔒 Confirm Password" required>
+        
+        <select name="country" required>
+          <option value="">🌐 -Select Country-</option>
+          <option value="bd">Bangladesh</option>
+          <option value="in">India</option>
+          <option value="np">Nepal</option>
+          <option value="mm">Myanmar</option>
+          <!-- Add more countries as needed -->
+        </select>
+
+        <input type="text" name="contact" placeholder="📱 Contact No" required>
+
+        <label class="academic-year-label">Academic Year
+          <input type="text" value="2026-2027" readonly>
+        </label>
+
+        <button type="submit" class="submit-btn">SUBMIT</button>
+      </form>
+    </section>
+
+    <section class="programs">
+      <div class="form-header">ACADEMIC PROGRAMS</div>
+      <!-- Leave content empty for now -->
+    </section>
+  </main>
+
+  <div class="back-button">
+    <a href="apply-msma.html">« Back to Login page</a>
+  </div>
+
+</body>
+</html>

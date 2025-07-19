@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AUW Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="background">
+    <div class="login-wrapper">
+      <div class="login-box">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <h2>AUW Login</h2>
+      </div>
+      <form action="login.php" method="POST">
+        <label for="email">Email</label>
+        <input class="input-field" type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input class="input-field" type="password" id="password" name="password" required>
+
+        <button class="signin-btn" type="submit">Login</button>
+      </form>
+      <div class="extra-links" style="text-align:center; margin-top:10px;">
+        <a href="register.html">Register</a> | 
+        <a href="forgot_password.html">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

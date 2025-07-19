@@ -1,0 +1,252 @@
+/* style.css */
+/* Header Styles */
+header {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Top red bar */
+  .top-bar {
+    background-color: #c72026;
+    padding: 5px 20px;
+    width: 100%;
+  }
+  
+  .top-bar-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .top-bar-right a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .top-bar-right span {
+    color: white;
+  }
+  
+  .search-icon {
+    cursor: pointer;
+  }
+  
+  /* Main Navigation */
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 2px solid #d2232a;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  
+  
+  /* Navigation Links */
+  .nav-links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+  }
+  
+  /* Buttons */
+  .nav-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .nav-buttons .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .btn.gray {
+    background-color: #54565a;
+  }
+  
+  .btn.gold {
+    background-color: #fdb913;
+  }
+  
+  .btn.yellow {
+    background-color: #fcb913;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .impact-banner {
+    width: 100%;
+    background: linear-gradient(to bottom, #ffffff 10%, #000000 100%);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .impact-title-container h1 {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  
+  /* Main container */
+  .impact-container {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .impact-section p {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  
+  /* Blockquote */
+  blockquote {
+    background-color: #fcf5ed;
+    border-left: 5px solid orange;
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-style: italic;
+  }
+  
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  /* Image */
+  .impact-image {
+    text-align: center;
+    margin: 25px 0;
+  }
+  
+  .impact-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Footer emphasis */
+  .highlight {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .footer-section {
+    background: #fff;
+    padding: 40px 20px 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #333;
+  }
+  
+  .footer-bar {
+    border-top: 5px solid #f0ad00;
+    text-align: center;
+    padding: 30px 10px;
+  }
+  
+  .footer-bar img {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  
+  .footer-socials {
+    margin-bottom: 20px;
+  }
+  
+  .footer-socials i {
+    font-size: 18px;
+    margin: 0 10px;
+    color: #D2232A;
+    cursor: pointer;
+  }
+  
+  .footer-bottom {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .footer-bottom a {
+    color: orange;
+    text-decoration: none;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    padding: 3px 0;
+  }
+  

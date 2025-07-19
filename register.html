@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Registration</title>
+  <link rel="stylesheet" href="registration1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Asian University for Women" />
+      <span>ASIAN UNIVERSITY FOR WOMEN</span>
+    </div>
+    <!-- You can add user-info or nav here if needed -->
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    <section class="registration-form">
+      <div class="form-header">Create Account</div>
+      <form action="register.php" method="POST">
+
+        <label for="email" class="academic-year-label">Email*</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="first_name" class="academic-year-label">First Name*</label>
+        <input type="text" id="first_name" name="first_name" required />
+
+        <label for="middle_name" class="academic-year-label">Middle Name</label>
+        <input type="text" id="middle_name" name="middle_name" />
+
+        <label for="last_name" class="academic-year-label">Last Name*</label>
+        <input type="text" id="last_name" name="last_name" required />
+
+        <label for="password" class="academic-year-label">Password*</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="country" class="academic-year-label">Country*</label>
+        <input type="text" id="country" name="country" required />
+
+        <label for="contact" class="academic-year-label">Contact Number*</label>
+        <input type="text" id="contact" name="contact" required />
+
+        
+        <label for="academic_year" class="academic-year-label">Academic Year*</label>
+        <input type="text" id="academic_year" name="academic_year" required />
+
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+
+      <div class="back-button">
+        Already have an account? <a href="login.html">Login</a>
+      </div>
+    </section>
+    <!-- Optional second column or content here if you want -->
+  </main>
+
+</body>
+</html>

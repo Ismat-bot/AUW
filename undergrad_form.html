@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MS Program Application Form</title>
+  <style>
+    /* Base Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e3f2fd;
+      margin: 0; 
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    form {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(33, 150, 243, 0.3);
+      max-width: 600px;
+      width: 100%;
+    }
+    h2 {
+      margin-bottom: 25px;
+      color: #0d47a1;
+      text-align: center;
+      font-weight: 700;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #0d47a1;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      margin-top: 6px;
+      border: 2px solid #90caf9;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #1976d2;
+      outline: none;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background-color: #1976d2;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(25, 118, 210, 0.5);
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0d47a1;
+    }
+
+    @media (max-width: 640px) {
+      form {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="submit_application.php" method="POST">
+    <h2>Apply for MS Program</h2>
+
+    <label for="full_name">Full Name</label>
+    <input type="text" id="full_name" name="full_name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" name="phone" />
+
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" required>
+      <option value="" disabled selected>Select gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="date_of_birth">Date of Birth</label>
+    <input type="date" id="date_of_birth" name="date_of_birth" required />
+
+    <label for="nationality">Nationality</label>
+    <input type="text" id="nationality" name="nationality" required />
+
+    <label for="university_name">University Name</label>
+    <input type="text" id="university_name" name="university_name" required />
+
+    <label for="cgpa">CGPA (on 4.00 scale)</label>
+    <input type="number" id="cgpa" name="cgpa" min="0" max="4" step="0.01" required />
+
+    <label for="major">Major / Department</label>
+    <input type="text" id="major" name="major" required />
+
+    <label for="graduation_year">Graduation Year</label>
+    <input type="number" id="graduation_year" name="graduation_year" min="2000" max="2099" required />
+
+    <label for="statement">Statement of Purpose</label>
+    <textarea id="statement" name="statement" placeholder="Tell us why you're applying..." required></textarea>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    
+    <button type="submit">Submit Application</button>
+  </form>
+
+</body>
+</html>

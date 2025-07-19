@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('graduation-bg.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+}
+
+.apply-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.admission-card {
+  background: white;
+  border-radius: 6px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.admission-card h2 {
+  margin-top: 0;
+  padding: 15px;
+  color: white;
+}
+
+.ug h2 {
+  background-color: #f06f23;
+}
+
+.ma h2 {
+  background-color: #e84949;
+}
+
+.ms h2 {
+  background-color: #7f3f98;
+}
+
+.admission-card p, .admission-card a {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.admission-card a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.apply-button {
+  display: inline-block;
+  margin-top: 15px;
+  background: #0c9900;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-follow {
+  background: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-follow a {
+  color: #0073e6;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}

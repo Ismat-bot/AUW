@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AUW Login</title>
+  <link rel="stylesheet" href="apply-msma.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <form class="login-box" action="login.php" method="POST">
+
+      <img src="logo.png" alt="AUW Logo" class="logo">
+
+      <input type="text" name="username" placeholder="Username" class="input-field" required>
+      <input type="password" name="password" placeholder="Password" class="input-field" required>
+      
+      <div class="remember">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember username</label>
+      </div>
+
+      <button type="submit" class="btn sign-in">Sign In</button>
+      <button type="button" class="btn register" onclick="location.href='register.html'">New Registration</button>
+      <p class="forgot"><a href="forgot_password.html">Forgot Your Password?</a></p>
+    </form>
+  </div>
+
+  <footer>
+    <p>For any queries or for more details contact</p>
+    <p>Email: <a href="mailto:msadmission@auw.edu.bd">msadmission@auw.edu.bd</a></p>
+    <p>Whatsapp: <a href="tel:+8801926673016">+880-1926673016</a></p>
+    <p>Cell: <a href="tel:+8801958509005">+880-1958509005</a></p>
+
+    <div class="social">
+      <p>Follow us on</p>
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Youtube</a>
+    </div>
+  </footer>
+</body>
+</html>

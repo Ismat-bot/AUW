@@ -1,0 +1,165 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.background {
+  background: url('graduation-bge.jpeg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-wrapper {
+  background-color: rgba(255,255,255,0.95);
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.login-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+/* Unified input styling */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+form label {
+  display: block;
+  margin: 10px;
+  font-size: 14px;
+}
+
+/* Button style for sign-in */
+.signin-btn {
+  width: 90%;
+  background-color: #e63946;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Toggle button (New Applicant / Back to Sign In) */
+.toggle-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Forgot password link */
+.forgot-link {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.register-box,
+.support-box,
+.how-apply,
+.important-box {
+  background-color: #fff3e0;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.register-box h3,
+.support-box h3,
+.how-apply h3,
+.important-box h3 {
+  background-color: #f2711c;
+  color: white;
+  padding: 10px;
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.new-btn {
+  display: block;
+  background-color: #f4b400;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Instruction buttons */
+.instruction-btn {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #d32f2f;
+  color: white;
+}
+.instruction-btn.yellow {
+  background-color: #fdd835;
+  color: black;
+}
+.instruction-btn.green {
+  background-color: #66bb6a;
+  color: white;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #e53935;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Optional: input group if you use email icon span */
+.input-group {
+  display: flex;
+  align-items: center;
+}
+.input-group .icon {
+  margin-right: 8px;
+}
+.input-group input {
+  flex: 1;
+}

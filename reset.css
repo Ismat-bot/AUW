@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.topbar {
+  background-color: #e62c3e;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.menu-icon i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 35px;
+}
+
+.user-info {
+  font-size: 14px;
+}
+
+.container {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.instruction {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2f892f;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.submit-btn:hover {
+  background-color: #256e25;
+}

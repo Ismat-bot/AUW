@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  background: #960019;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: background 0.3s;
+}
+
+nav ul li a.btn {
+  border-radius: 4px;
+}
+
+nav ul li a.apply {
+  background-color: #f7b733;
+  color: black;
+}
+
+nav ul li a.donate {
+  background-color: #f44336;
+}
+
+.hero {
+  background: url('banner.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #222;
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.video iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.mission-text p {
+  margin-bottom: 20px;
+}
+
+.mission-text h3 {
+  margin: 20px 0 10px;
+  color: #960019;
+}
+
+.mission-text ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.mission-text ul li {
+  list-style: disc;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
