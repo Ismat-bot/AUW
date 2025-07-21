@@ -3,7 +3,7 @@
 
 $host = '127.0.0.1';
 $db_user = 'root';
-$db_password = '';
+$db_password = '';  // If your root has no password
 $db_name = 'auw';
 $port = 3307;
 

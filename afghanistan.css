@@ -39,7 +39,7 @@ header {
     cursor: pointer;
   }
   
-  /* Main Navigation */
+/* Main Navigation */
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -204,126 +204,64 @@ body {
   .btn:hover {
     opacity: 0.9;
   }
-  /* Reset and Base Styles */
-* {
+  body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Segoe UI", sans-serif;
+    background: #fff;
     color: #222;
-    background-color: white;
-    line-height: 1.6;
   }
   
-  /* Hero Section */
-  .hero {
-    background: url('header-bg.jpeg') center center/cover no-repeat;
-    height: 160px;
+  .afghanistan-banner {
+    background: url('afghan-banner.jpeg') center/cover no-repeat;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .hero-text h1 {
     color: white;
-    font-size: 36px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 4px #000;
   }
   
-  /* Main Layout */
-  .content-wrapper {
-    display: flex;
-    max-width: 1100px;
+  .afghanistan-banner h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .afghanistan-content {
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
-    gap: 40px;
   }
   
-  /* Main Text */
-  .main-content {
-    flex: 3;
-  }
-  
-  .main-content a {
-    color: #c00;
-    text-decoration: underline;
-  }
-  
-  h2 {
-    color: #c00;
+  .afghanistan-content h3 {
     margin-top: 30px;
   }
   
-  .underline {
-    border: none;
-    border-top: 2px solid orange;
-    margin: 10px 0 20px 0;
-    width: 100%;
+  .afghanistan-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
   
-  /* Director List */
-  .directors {
-    list-style: none;
-    padding-left: 0;
+  .media-list {
+    padding-left: 20px;
   }
   
-  .directors li {
-    margin-bottom: 15px;
+  .media-list li {
+    margin-bottom: 12px;
   }
   
-  /* Sidebar */
-  .sidebar {
-    flex: 1;
-  }
-  
-  .donate-box {
-    position: relative;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .donate-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .donate-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  /* Sidebar Links */
-  .sidebar-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar-links li {
-    margin: 10px 0;
-  }
-  
-  .sidebar-links li a {
+  .media-list a {
+    color: #b30000;
     text-decoration: none;
-    color: black;
   }
   
-  .sidebar-links li.active {
-    background-color: #f4aa00;
-    padding: 6px 10px;
+  .media-list a:hover {
+    text-decoration: underline;
   }
-  .footer-section {
+  
+.footer-section {
     background: #fff;
     padding: 40px 20px 20px;
     text-align: center;

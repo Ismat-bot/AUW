@@ -1,12 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AUW Support Foundation</title>
-  <link rel="stylesheet" href="auw-support.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accreditation & Recognition – AUW</title>
   <link rel="icon" href="icon.jpg" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+   header {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Top red bar */
+.top-bar {
+  background-color: #c72026;
+  padding: 5px 20px;
+  width: 100%;
+}
+
+.top-bar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.top-bar-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-bar-right span {
+  color: white;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  border-bottom: 2px solid #d2232a;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  margin-right: 30px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+  font-weight: bold;
+}
+
+/* Dropdown content - hidden initially */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 900px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 999;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-direction: row;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.left-menu {
+  width: 50%;
+  list-style: none;
+}
+
+.left-menu li {
+  margin-bottom: 10px;
+}
+
+.left-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.right-images {
+  display: flex;
+  gap: 20px;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-box img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+/* Navigation Links */
+.nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-buttons .btn {
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn.gray {
+  background-color: #54565a;
+}
+
+.btn.gold {
+  background-color: #fdb913;
+}
+
+.btn.yellow {
+  background-color: #fcb913;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+    .sidebar {
+      flex: 1;
+      max-width: 250px;
+      margin-right: 30px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .sidebar ul li.active a {
+      background-color: #f5a300;
+      color: white;
+      padding: 6px 10px;
+      display: inline-block;
+    }
+
+    .content {
+      flex: 3;
+    }
+
+    .content h2 {
+      color: #990000;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+    }
+   .footer-section {
+  background: #fff;
+  padding: 40px 20px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #333;
+}
+
+.footer-bar {
+  border-top: 5px solid #f0ad00;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.footer-bar img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.footer-socials {
+  margin-bottom: 20px;
+}
+
+.footer-socials i {
+  font-size: 18px;
+  margin: 0 10px;
+  color: #D2232A;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer-bottom p {
+  margin: 0;
+  padding: 3px 0;
+}
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 24px;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+    /* Sidebar Navigation Styling */
+.sidebar {
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #eee;
+}
+
+/* Active/Current Page Highlight */
+.sidebar ul li.active,
+.sidebar ul li.active a {
+  background-color: #fdb913;
+  font-weight: bold;
+  color: #000;
+  pointer-events: none;
+  cursor: default;
+}
+
+  </style>
 </head>
 <body>
 
@@ -202,55 +566,67 @@
     </div>
   </div>
 </header>
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-text">
-      <h1>AUW SUPPORT FOUNDATIONS</h1>
-    </div>
-  </section>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="banner1.jpeg" alt="AUW Accreditation Banner">
+  </div>
 
   <!-- Main Content -->
-  <div class="content-wrapper">
-    <div class="main-content">
-      <p><strong>Asian University for Women Support Foundation</strong> in Cambridge, Massachusetts, USA is a 501(c)3-registered nonprofit organization (EIN: 36-4483980). Incorporated in 2001, it is governed by a Board of Directors, several of whom also serve on the AUW Board of Trustees. The AUWSF in Cambridge lends counsel and support to other Support Foundations and Groups throughout the world.</p>
-
-      <p>For donations in U.S., please contact give(at)asian-university.org. Please mail check donations to: P.O. Box 380768, Cambridge, MA 02238, USA. For stocks and wire donations, please contact give(at)asian-university.org. Online credit card donations are available from this link: <a href="https://asian-university.org/donate" target="_blank">https://asian-university.org/donate</a>.</p>
-
-      <h2>Board of Directors of AUW Support Foundation</h2>
-      <hr class="underline"/>
-
-      <ul class="directors">
-        <li><strong>Jack Meyer</strong>, Chairman, Board of Directors of AUW Support Foundation; Former President of Harvard Management Company; Former Senior Partner of Convexity Capital</li>
-        <li><strong>Paul Ciampa</strong>, Treasurer, Board of Directors of AUW Support Foundation; Former Partner and Senior Portfolio Manager at Convexity Capital</li>
-        <li><strong>Kamal Ahmad</strong>, President & CEO, AUW Support Foundation</li>
-        <li><strong>Natalie Ackerman</strong>, Chief People Officer, Jack Morton Worldwide</li>
-        <li><strong>Lynne Anne Davis</strong>, Former President & Senior Partner, FleishmanHillard Asia Pacific</li>
-        <li><strong>Thom Lockerby</strong>, Secretary of the Academy at Philips Academy, Andover</li>
-        <li><strong>Kathy Matsui</strong>, General Partner, MPower</li>
-        <li><strong>Miwa Seki</strong>, General Partner, MPower</li>
-        <li><strong>Tina Tchen</strong>, Executive Vice President and Chief Strategy and Impact Officer, Obama Foundation</li>
+  <div class="main-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Mission & Vision</a></li>
+        <li class="active"><a href="#">Accreditation & Recognition</a></li>
+        <li><a href="#">Statement of Integrity</a></li>
+        <li><a href="#">Governance</a></li>
+        <li><a href="#">AUW Management & Admin Operations</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Chittagong, Bangladesh</a></li>
+        <li><a href="#">Frequently Asked Questions</a></li>
+        <li><a href="#">Audited Financial Statements</a></li>
       </ul>
     </div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="donate-box">
-        
-        <img src="donate-bg.jpeg" alt="Donate Background" />
-        <button class="donate-btn"><a href="donate.html">DONATE</a>
-        </button>
-      </div>
+    <!-- Content -->
+    <div class="content">
+      <h2>Accreditation & Recognition</h2>
+      <p>
+        The Asian University for Women (AUW) received its Charter from the Parliament of Bangladesh in 2006, 
+        granting it full autonomy and the right to award undergraduate and graduate degrees. AUW is an independent, 
+        international university and not a branch or satellite of any other institution.
+      </p>
 
-      <ul class="sidebar-links">
-        <li><a href="#">DENMARK SUPPORT FOUNDATION</a></li>
-        <li><a href="#">HONG KONG SUPPORT FOUNDATION</a></li>
-        <li><a href="#">JAPAN SUPPORT GROUP</a></li>
-        <li><a href="#">UK SUPPORT FOUNDATION</a></li>
-        <li class="active"><a href="#">US SUPPORT FOUNDATION</a></li>
-      </ul>
-    </aside>
+      <p>
+        AUW is recognized by the University Grants Commission (UGC) of Bangladesh, the government body that regulates 
+        higher education institutions in the country. The academic programs and curriculum are reviewed and developed 
+        in consultation with distinguished scholars and institutions around the world.
+      </p>
+
+      <p>
+        AUW’s liberal arts and sciences education model has been developed in collaboration with leading academics from 
+        institutions such as Harvard, Stanford, and Oxford. The university adheres to international standards of academic 
+        quality, and its graduates have gone on to pursue advanced studies and careers in leading global institutions.
+      </p>
+
+      <p>
+        In 2011, AUW was granted permanent membership in the Association of Commonwealth Universities (ACU), 
+        and it maintains institutional partnerships with a wide range of organizations and universities across Asia, 
+        Europe, and North America.
+      </p>
+    </div>
   </div>
-<!-- Footer Section -->
+
+   <!-- Footer Section -->
+  <div class="footer-section">
+    <p>
+      Asian University for Women (AUW) adheres to the highest standards of integrity in all its affairs. Still, we recognize, mistakes are made, intentionally or otherwise. Without knowledge of any misdeeds that may have occurred, we are unable to take corrective action. We request the public to notify AUW of any real or suspected misdeed through this anonymous portal. A misdeed is a misdeed — it can be financial malfeasance; sexual harassment; policy or administrative dysfunctions. Regardless of the matter, help us improve AUW by bringing your concerns to our attention through the following anonymous portal: 
+      <a href="https://apps.auw.edu.bd/erp/auw/r/auw-erp/anonymous-complaint" target="_blank">
+        https://apps.auw.edu.bd/erp/auw/r/auw-erp/anonymous-complaint
+      </a>
+    </p>
+  </div>
 
   <div class="footer-bar">
     <div class="footer-links">
@@ -291,6 +667,7 @@
     </p>
     <p><em>Yelling Mule – Boston Web Design | Ransomware Protection</em></p>
   </div>
-
+  <script src="script.js"></script>
 </body>
 </html>
+

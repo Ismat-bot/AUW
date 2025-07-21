@@ -2,11 +2,12 @@
 // 1. DB connection setup
 $host = '127.0.0.1';
 $db_user = 'root';
-$db_password = '';  // your DB password
-$database = 'auw';
+$db_password = '';  // If your root has no password
+$db_name = 'auw';
 $port = 3307;
 
-$conn = new mysqli($host, $db_user, $db_password, $database, $port);
+$conn = new mysqli($host, $db_user, $db_password, $db_name, $port);
+
 
 // 2. Check connection
 if ($conn->connect_error) {

@@ -3,11 +3,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
 
-$host = '127.0.0.1'; // Prefer IP, especially with custom ports
+$host = '127.0.0.1';
 $db_user = 'root';
-$db_password = '';
+$db_password = '';  // If your root has no password
 $db_name = 'auw';
-$port = 3307; // Port should be integer, not string
+$port = 3307;
 
 $conn = new mysqli($host, $db_user, $db_password, $db_name, $port);
 

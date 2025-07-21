@@ -2,13 +2,14 @@
 session_start();
 
 // 1. Connect to DB
-$host = "127.0.0.1";
-$user = "root";
-$password = ""; // ✅ Your actual DB password is empty
-$database = "auw";
+$host = '127.0.0.1';
+$db_user = 'root';
+$db_password = '';  // If your root has no password
+$db_name = 'auw';
 $port = 3307;
 
-$conn = new mysqli($host, $user, $password, $database, $port);
+$conn = new mysqli($host, $db_user, $db_password, $db_name, $port);
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

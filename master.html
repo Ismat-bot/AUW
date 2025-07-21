@@ -1,15 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mission & Vision | AUW</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="icon.jpg" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Masters Programs – AUW Academics</title>
+  <link rel="icon" href="icon.jpg" type="image/png" />
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      font-family: sans-serif;
+    }
+    .top-bar {
+      background-color: #c72026;
+      padding: 5px 20px;
+      width: 100%;
+      color: white;
+      font-size: 12px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+    }
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-bottom: 2px solid #d2232a;
+      flex-wrap: wrap;
+    }
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+    nav.navbar ul.menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav.navbar ul.menu li {
+      position: relative;
+      margin-right: 30px;
+    }
+    nav.navbar ul.menu li a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 15px;
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 900px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 20px;
+      z-index: 999;
+      flex-wrap: wrap;
+      gap: 30px;
+      flex-direction: row;
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+    .left-menu {
+      width: 50%;
+      list-style: none;
+    }
+    .left-menu li {
+      margin-bottom: 10px;
+    }
+    .left-menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: normal;
+      font-size: 13px;
+    }
+    .left-menu a:hover {
+      text-decoration: underline;
+    }
+    .right-images {
+      display: flex;
+      gap: 20px;
+    }
+    .img-box {
+      position: relative;
+      width: 200px;
+    }
+    .img-box img {
+      width: 100%;
+      border-radius: 5px;
+      display: block;
+    }
+    .caption {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      background-color: rgba(0,0,0,0.6);
+      padding: 5px 10px;
+      font-weight: bold;
+      font-size: 14px;
+      user-select: none;
+    }
+    .nav-buttons {
+      display: flex;
+      gap: 5px;
+    }
+    .nav-buttons .btn {
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 2px;
+    }
+    .btn.gray { background-color: #54565a; }
+    .btn.gold { background-color: #fdb913; color: black; }
+    .btn.yellow { background-color: #fcb913; color: black; }
+    .btn:hover { opacity: 0.9; }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+    .page-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #7a0000;
+      margin-bottom: 30px;
+    }
+    .content-section p, .content-section ul {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .content-section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .content-section ul li {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    footer {
+      background: #fff;
+      padding: 40px 20px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    footer p a {
+      color: #d2232a;
+      text-decoration: none;
+    }
+    .footer-bar {
+      border-top: 5px solid #f0ad00;
+      text-align: center;
+      padding: 30px 10px 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: #333;
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    .footer-links span {
+      color: #333;
+      user-select: none;
+    }
+    .footer-socials {
+      margin-bottom: 20px;
+    }
+    .footer-socials i {
+      font-size: 18px;
+      margin: 0 10px;
+      color: #D2232A;
+      cursor: pointer;
+    }
+    .footer-bar img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .footer-bar h3 {
+      margin-bottom: 30px;
+      font-weight: bold;
+      color: #7a0000;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+    .footer-bottom {
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      font-size: 12px;
+      text-align: center;
+    }
+    .footer-bottom a {
+      color: orange;
+      text-decoration: none;
+    }
+    .footer-bottom p {
+      margin: 0;
+      padding: 3px 0;
+    }
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 24px;
+      }
+      .menu {
+        flex-direction: column;
+      }
+      .menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        flex-direction: column;
+        padding: 10px 0;
+      }
+      .left-menu {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .right-images {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <header>
   <div class="top-bar">
     <div class="top-bar-right">
@@ -201,70 +457,54 @@
     </div>
   </div>
 </header>
-    
 
-  <!-- Include top bar and nav from index.html -->
-  <!-- ... Copy the entire <header> section from index.html here ... -->
+<!-- MAIN CONTENT -->
+<div class="container">
+  <h1 class="page-title">Masters Programs</h1>
 
-  <!-- Banner Image with Title -->
-  <div style="position: relative;">
-    <img src="banner.jpeg" alt="Banner" style="width: 100%; height: auto;">
-    <h1 style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: white; background-color: rgba(0,0,0,0.5); padding: 10px 20px; font-size: 32px;">MISSION & VISION</h1>
-  </div>
+  <section class="content-section">
+    <p>
+      The Asian University for Women offers master's programs designed to deepen academic knowledge and leadership skills. Our graduate studies focus on interdisciplinary research and social impact in the Asian context.
+    </p>
 
-  <!-- Main Content -->
-  <div class="container mt-5 mb-5 d-flex flex-column flex-md-row gap-5">
-    
-    <!-- Left Column -->
-    <div class="flex-grow-1">
-      <div class="ratio ratio-16x9 mb-4">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="AUW Mission Video" allowfullscreen></iframe>
-      </div>
-      
-      <p>
-        Asian University for Women (AUW) seeks to offer high quality education to young women drawn from diverse national, ethnic and socio-economic backgrounds...
-      </p>
+    <h2>Available Masters Programs</h2>
+    <ul>
+      <li>Master of Arts in Economics</li>
+      <li>Master of Arts in Gender and Women's Studies</li>
+      <li>Master of Arts in International Relations</li>
+      <li>Master of Science in Environmental Science and Policy</li>
+    </ul>
 
-      <p>
-        AUW seeks to graduate women who will be skilled and innovative professionals, service-oriented leaders...
-      </p>
+    <h2>Program Features</h2>
+    <ul>
+      <li>Two-year master's degree programs</li>
+      <li>Emphasis on interdisciplinary learning and critical inquiry</li>
+      <li>Experienced faculty and research mentors</li>
+            <li>Engagement with regional and global issues through research and community projects</li>
+      <li>Opportunities for internships and fieldwork</li>
+      <li>Small class sizes fostering personalized learning</li>
+    </ul>
 
-      <p><strong>We therefore make it our mission to:</strong></p>
-      <ul>
-        <li>Provide a vibrant and diverse residential learning community...</li>
-        <li>Create an environment where alumnae and graduates...</li>
-        <li>Care of the student-focused learning environment...</li>
-        <li>Foster student learning on the acquisition of intellectual abilities...</li>
-      </ul>
+    <h2>Admission Requirements</h2>
+    <ul>
+      <li>Bachelor’s degree or equivalent from a recognized institution</li>
+      <li>Demonstrated academic excellence and leadership potential</li>
+      <li>Submission of a statement of purpose and letters of recommendation</li>
+      <li>English proficiency test scores (e.g., TOEFL, IELTS) if applicable</li>
+    </ul>
 
-      <p>
-        AUW seeks to graduate women bent on changing their society...
-      </p>
-    </div>
+    <h2>Application Process</h2>
+    <p>
+      Prospective students are encouraged to visit the <a href="apply.html">Admissions</a> page for detailed application instructions and deadlines. Our admissions team is available to assist with queries related to program suitability and application requirements.
+    </p>
+  </section>
+</div>
 
-    <!-- Right Column (Sidebar) -->
-    <div style="width: 280px;">
-      <div style="background: red; color: white; padding: 20px; text-align: center; font-weight: bold;">
-        GET INVOLVED<br><a href="#" style="color: white; text-decoration: underline;">LEARN MORE</a>
-      </div>
-
-      <ul class="list-unstyled mt-3">
-        <li style="background: #fdb913; padding: 8px;"><strong>MISSION & VISION</strong></li>
-        <li><a href="#">ACCREDITATION & RECOGNITION</a></li>
-        <li><a href="#">STATEMENT OF INTEGRITY</a></li>
-        <li><a href="#">GOVERNANCE</a></li>
-        <li><a href="#">AUW MANAGEMENT & ADMINISTRATION</a></li>
-        <li><a href="#">HISTORY</a></li>
-        <li><a href="#">CHITTAGONG, BANGLADESH</a></li>
-        <li><a href="#">FREQUENTLY ASKED QUESTIONS</a></li>
-        <li><a href="#">AUDITED FINANCIAL STATEMENTS</a></li>
-      </ul>
-    </div>
-  </div>
-
+<!-- Footer Section -->
+<footer>
   <div class="footer-section">
     <p>
-      Asian University for Women (AUW) adheres to the highest standards of integrity in all its affairs. Still, we recognize, mistakes are made, intentionally or otherwise. Without knowledge of any misdeeds that may have occurred, we are unable to take corrective action. We request the public to notify AUW of any real or suspected misdeed through this anonymous portal. A misdeed is a misdeed — it can be financial malfeasance; sexual harassment; policy or administrative dysfunctions. Regardless of the matter, help us improve AUW by bringing your concerns to our attention through the following anonymous portal: 
+      Asian University for Women (AUW) adheres to the highest standards of integrity in all its affairs. We encourage anyone to notify AUW of any concerns or misdeeds through our anonymous portal: 
       <a href="https://apps.auw.edu.bd/erp/auw/r/auw-erp/anonymous-complaint" target="_blank">
         https://apps.auw.edu.bd/erp/auw/r/auw-erp/anonymous-complaint
       </a>
@@ -273,18 +513,12 @@
 
   <div class="footer-bar">
     <div class="footer-links">
-      <a href="who-we-are.html">About</a>
-      <span>|</span>
-      <a href="apply.html">Apply</a>
-      <span>|</span>|
-      <a href="career.html">Career Opportunities</a>
-      <span>|</span>|
-      <a href="contact.html">Contact</a>
-      <span>|</span>|
-      <a href="donate.html">Donate</a>
-      <span>|</span>|
+      <a href="who-we-are.html">About</a><span>|</span>
+      <a href="apply.html">Apply</a><span>|</span>
+      <a href="career.html">Career Opportunities</a><span>|</span>
+      <a href="contact.html">Contact</a><span>|</span>
+      <a href="donate.html">Donate</a><span>|</span>
       <a href="news.html">News</a>
-      <span>|</span>|
     </div>
 
     <div class="footer-socials">
@@ -295,13 +529,15 @@
       <i class="fab fa-instagram"></i>
     </div>
 
-    <img src="auw-logo.png" alt="AUW Logo">
+    <img src="auw-logo.png" alt="AUW Logo" />
     <h3>ASIAN UNIVERSITY FOR WOMEN</h3>
   </div>
 
   <div class="footer-bottom">
     <p>&copy; 2024, Asian University for Women. Trademark Notice. All Rights Reserved. <a href="#">Privacy</a></p>
-    <p>This copyright is held jointly by the Trustees of the Asian University for Women and the Board of Directors of the Asian University for Women Support Foundation.</p>
+    <p>
+      This copyright is held jointly by the Trustees of the Asian University for Women and the Board of Directors of the Asian University for Women Support Foundation.
+    </p>
     <p>
       Please mail all checks to 
       <a href="https://maps.google.com/?q=PO Box 380739, Cambridge, MA 02238, USA" target="_blank">
@@ -310,7 +546,7 @@
     </p>
     <p><em>Yelling Mule – Boston Web Design | Ransomware Protection</em></p>
   </div>
-  <script src="script.js"></script>
+</footer>
+
 </body>
 </html>
-

@@ -1,3 +1,4 @@
+* 
 /* style.css */
 /* Header Styles */
 header {
@@ -204,125 +205,156 @@ body {
   .btn:hover {
     opacity: 0.9;
   }
-  /* Reset and Base Styles */
-* {
+
+  
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
   body {
-    font-family: "Segoe UI", sans-serif;
-    color: #222;
-    background-color: white;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
   }
   
-  /* Hero Section */
-  .hero {
-    background: url('header-bg.jpeg') center center/cover no-repeat;
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .hero-text h1 {
-    color: white;
-    font-size: 36px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Main Layout */
-  .content-wrapper {
-    display: flex;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    gap: 40px;
-  }
-  
-  /* Main Text */
-  .main-content {
-    flex: 3;
-  }
-  
-  .main-content a {
-    color: #c00;
-    text-decoration: underline;
-  }
-  
-  h2 {
-    color: #c00;
-    margin-top: 30px;
-  }
-  
-  .underline {
-    border: none;
-    border-top: 2px solid orange;
-    margin: 10px 0 20px 0;
-    width: 100%;
-  }
-  
-  /* Director List */
-  .directors {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .directors li {
-    margin-bottom: 15px;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    flex: 1;
-  }
-  
-  .donate-box {
+  /* Header Banner */
+  .header-banner {
+    background-image: url('hero.jpeg'); /* Replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    height: 250px;
     position: relative;
-    text-align: center;
-    margin-bottom: 30px;
   }
   
-  .donate-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .donate-btn {
+  .overlay-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: transparent;
+    bottom: 20px;
+    left: 40px;
     color: white;
-    border: 2px solid white;
-    padding: 8px 16px;
-    cursor: pointer;
+    font-size: 2.5rem;
     font-weight: bold;
+    text-shadow: 2px 2px 5px #000;
   }
   
-  /* Sidebar Links */
-  .sidebar-links {
+  /* Navigation */
+  .top-nav {
+    background-color: #f5f5f5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .top-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
     list-style: none;
-    padding: 0;
+    font-size: 0.85rem;
+    gap: 15px;
   }
   
-  .sidebar-links li {
+  /* Content */
+  .content {
+    padding: 30px 40px;
+  }
+  
+  .admissions-section {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 50px;
+  }
+  
+  .admissions-box {
+    background: #fae8c8;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    border-radius: 8px;
+  }
+  
+  .admissions-box .title {
+    font-weight: bold;
+    font-size: 1.1rem;
     margin: 10px 0;
   }
   
-  .sidebar-links li a {
-    text-decoration: none;
-    color: black;
+  .admissions-box button {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
   }
   
-  .sidebar-links li.active {
-    background-color: #f4aa00;
-    padding: 6px 10px;
+  .description-box {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.5;
   }
+  
+  /* Stats Section */
+  .info-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .info-stats .stat img {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .info-stats .stat p {
+    font-size: 0.9rem;
+  }
+  
+  /* Student Section */
+  .student-highlight {
+    display: flex;
+    background-color: #b30a0a;
+    color: white;
+    padding: 40px;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .student-text {
+    flex: 1;
+  }
+  
+  .student-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .student-text .subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .student-text .quote {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .hero-right {
+    flex: 1;
+  }
+  
+
+  .student-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
   .footer-section {
     background: #fff;
     padding: 40px 20px 20px;

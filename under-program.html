@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Undergraduate Programs – AUW Academics</title>
+  <link rel="icon" href="icon.jpg" type="image/png" />
+  <style>
+    /* Reset & basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      font-family: sans-serif;
+    }
+
+    /* Top red bar */
+    .top-bar {
+      background-color: #c72026;
+      padding: 5px 20px;
+      width: 100%;
+    }
+
+    .top-bar-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-right a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .top-bar-right span {
+      color: white;
+    }
+
+    .search-icon {
+      cursor: pointer;
+    }
+
+    /* Main Navigation */
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-bottom: 2px solid #d2232a;
+      flex-wrap: wrap;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    /* Navigation menus */
+    .navbar {
+      background-color: #fff;
+      padding: 0;
+      position: relative;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .menu li {
+      position: relative;
+      margin-right: 30px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 15px;
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Dropdown content - hidden initially */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 900px;
+      background-color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      z-index: 999;
+      flex-wrap: wrap;
+      gap: 30px;
+      flex-direction: row;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .left-menu {
+      width: 50%;
+      list-style: none;
+    }
+
+    .left-menu li {
+      margin-bottom: 10px;
+    }
+
+    .left-menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: normal;
+      font-size: 13px;
+    }
+
+    .left-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .right-images {
+      display: flex;
+      gap: 20px;
+    }
+
+    .img-box {
+      position: relative;
+      width: 200px;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      display: block;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 5px 10px;
+      font-weight: bold;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    /* Navigation Buttons */
+    .nav-buttons {
+      display: flex;
+      gap: 5px;
+    }
+
+    .nav-buttons .btn {
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 2px;
+    }
+
+    .btn.gray {
+      background-color: #54565a;
+    }
+
+    .btn.gold {
+      background-color: #fdb913;
+      color: black;
+    }
+
+    .btn.yellow {
+      background-color: #fcb913;
+      color: black;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Container for main content */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+
+    .page-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #7a0000;
+      margin-bottom: 30px;
+    }
+
+    /* Content styling */
+    .content-section p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .content-section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .content-section ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Footer Section */
+    .footer-section {
+      background: #fff;
+      padding: 40px 20px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-section p a {
+      color: #d2232a;
+      text-decoration: none;
+    }
+
+    .footer-bar {
+      border-top: 5px solid #f0ad00;
+      text-align: center;
+      padding: 30px 10px 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .footer-links span {
+      color: #333;
+      user-select: none;
+    }
+
+    .footer-socials {
+      margin-bottom: 20px;
+    }
+
+    .footer-socials i {
+      font-size: 18px;
+      margin: 0 10px;
+      color: #D2232A;
+      cursor: pointer;
+    }
+
+    .footer-bar img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .footer-bar h3 {
+      margin-bottom: 30px;
+      font-weight: bold;
+      color: #7a0000;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .footer-bottom {
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .footer-bottom a {
+      color: orange;
+      text-decoration: none;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      padding: 3px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 24px;
+      }
+
+      .menu {
+        flex-direction: column;
+      }
+
+      .menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        flex-direction: column;
+        padding: 10px 0;
+      }
+
+      .left-menu {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .right-images {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+<header>
+  <div class="top-bar">
+    <div class="top-bar-right">
+      <a href="afghanistan.html">Afghanistan Support</a>
+      <span>|</span>
+      <a href="alumnae.html">Alumnae</a>
+      <span>|</span>
+      <a href="library.html">AUW Library</a>
+      <span>|</span>
+      <a href="career.html">Career Opportunities</a>
+      <span>|</span>
+      <a href="contact.html">Contact</a>
+      <span>|</span>
+      <a href="emergency.html">Emergency Contacts</a>
+      <span>|</span>
+      <a href="subscribe.html">Subscribe</a>
+      <span>|</span>
+      <span class="search-icon">🔍</span>
+    </div>
+  </div>
+</body>
+</html>
+
+  <!-- Bottom white nav -->
+  <div class="main-nav">
+    <div class="logo">
+      <img src="auw-logo.png" alt="AUW Logo" />
+     
+    </div>
+
+    <nav class="nav-links">
+      
+    
+        <nav class="navbar">
+  <ul class="menu">
+
+    <!-- ─── 1. WHO WE ARE ─────────────────────────────────────────────── -->
+    <li class="dropdown">
+      <a href="who-we-are.html" class="dropdown-toggle">Who We Are</a>
+
+      <div class="dropdown-content">
+        <ul class="left-menu">
+          <li><a href="mission.html">Mission & Vision</a></li>
+          <li><a href="statement-of-integrity.html">Statement of Integrity</a></li>
+          <li><a href="accreditation.html">Accreditation & Recognition</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="management.html">AUW Management</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="#">Chittagong, Bangladesh</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Financial Statements</a></li>
+        </ul>
+
+        <div class="right-images">
+          <div class="img-box">
+            <img src="sarita.png" alt="Mission image">
+            <span class="caption">MISSION &amp; VISION</span>
+          </div>
+          <div class="img-box">
+            <img src="rimu.png" alt="History image">
+            <span class="caption">HISTORY</span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- ─── 2. ADMISSIONS ─────────────────────────────────────────────── -->
+    <li class="dropdown">
+      <a href="apply.html" class="dropdown-toggle">Admissions</a>
+
+      <div class="dropdown-content">
+        <ul class="left-menu">
+          <li><a href="who-can-apply.html">Who Can Apply</a></li>
+          <li><a href="apply.html">How to Apply</a></li>
+          <li><a href="#">Tuition &amp; Fees</a></li>
+          <li><a href="#">Scholarships &amp; Aid</a></li>
+          <li><a href="#">Frequently Asked Questions</a></li>
+          <li><a href="#">About AUW (in Arabic)</a></li>
+        </ul>
+
+        <div class="right-images">
+          <div class="image-box" style="background-image:url('sonam.jpg');">
+            <a href="#" class="image-btn">CONTACT ADMISSIONS</a>
+          </div>
+          <div class="image-box" style="background-image:url('sarita.png');">
+            <a href="#" class="image-btn">APPLY</a>
+          </div>
+        </div>
+      </div>
+    </li>
+ <!-- ACADEMICS -->
+    <li class="dropdown">
+      <a href="academic.html" class="dropdown-toggle">Academics</a>
+      <div class="dropdown-content">
+        <ul class="left-menu">
+          <li><a href="pre-program.html">Pre-Undergraduate Programs</a></li>
+          <li><a href="under-program.html">Undergraduate Programs</a></li>
+          <li><a href="master.html">Masters Programs</a></li>
+          <li><a href="#">Summer School</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Teaching Fellowship</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Center for Climate Change and Environmental Health</a></li>
+          <li><a href="#">Academic Support & Resources</a></li>
+          <li><a href="#">Academic Calendar & Bulletin</a></li>
+        </ul>
+        <div class="right-images">
+          <div class="image-box" style="background-image:url('rimu.png');">
+            <a href="#" class="image-btn">ACADEMIC CALENDAR</a>
+          </div>
+          <div class="image-box" style="background-image:url('tian.png');">
+            <a href="#" class="image-btn">ACADEMIC SUPPORT</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- STUDENT LIFE -->
+    <li class="dropdown">
+      <a href="student.html" class="dropdown-toggle">Student Life</a>
+      <div class="dropdown-content">
+        <ul class="left-menu">
+          <li><a href="student.html">Our Students</a></li>
+          <li><a href="#">Our Traditions</a></li>
+          <li><a href="#">Student Activities</a></li>
+          <li><a href="#">Center of Leadership and Professional Development</a></li>
+          <li><a href="#">Housing & Dining</a></li>
+          <li><a href="#">Health & Wellness</a></li>
+          <li><a href="#">Mental Health Advisory Board</a></li>
+          <li><a href="#">Life in Chittagong</a></li>
+          <li><a href="#">Safety & Security</a></li>
+          <li><a href="#">AUW Anonymous Complaint Portal</a></li>
+        </ul>
+        <div class="right-images">
+          <div class="image-box" style="background-image:url('tian.jpg');">
+            <a href="#" class="image-btn">STUDENT ACTIVITIES</a>
+          </div>
+          <div class="image-box" style="background-image:url('rimu.jpg');">
+            <a href="#" class="image-btn">APPLY</a>
+          </div>
+        </div>
+      </div>
+    </li>
+      <!-- IMPACT -->
+      <li class="dropdown">
+        <a href="auw-campus.html" class="dropdown-toggle">Campus Construction</a>
+        <div class="dropdown-content">
+          
+        </div>
+      </li>
+
+
+    <!-- IMPACT -->
+      <li class="dropdown">
+        <a href="impact.html" class="dropdown-toggle">Impact</a>
+        <div class="dropdown-content">
+          <ul class="left-menu">
+            <li><a href="alumnae.html">Alumnae</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="news.html">AUW Updates</a></li>
+            <li><a href="news.html">AUW in the News</a></li>
+          </ul>
+        </div>
+      </li>
+    <!-- AUW SUPPORT FOUNDATIONS -->
+      <li class="dropdown">
+        <a href="auw-support.html" class="dropdown-toggle">AUW Support Foundations</a>
+        <div class="dropdown-content">
+          <ul class="left-menu">
+            <li><a href="#">Denmark</a></li>
+            <li><a href="#">Hong Kong</a></li>
+            <li><a href="#">Japan</a></li>
+            <li><a href="#">UK</a></li>
+            <li><a href="#">US</a></li>
+          </ul>
+          <div class="right-buttons">
+            <a href="#" class="yellow-button">DONATE</a>
+            <a href="#" class="yellow-button">CONTACT</a>
+          </div>
+        </div>
+      </li>
+
+    </nav>
+
+    <div class="nav-buttons">
+      <a class="btn gray" href="apply.html">APPLY</a>
+      <a class="btn gold" href="donate.html">DONATE</a>
+      <a class="btn yellow" href="contact.html">CONTACT</a>
+    </div>
+  </div>
+</header>
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <h1 class="page-title">Undergraduate Programs</h1>
+
+    <section class="content-section">
+      <p>
+        AUW offers a diverse range of undergraduate degree programs designed to empower women across Asia and the world. Our undergraduate curriculum fosters critical thinking, leadership, and academic excellence to prepare students for successful careers and social impact.
+      </p>
+
+      <h2>Degree Programs</h2>
+      <ul>
+        <li>Bachelor of Arts in Economics</li>
+        <li>Bachelor of Arts in Gender and Women’s Studies</li>
+        <li>Bachelor of Arts in International Relations</li>
+        <li>Bachelor of Arts in Literature and Humanities</li>
+        <li>Bachelor of Science in Environmental Science and Policy</li>
+        <li>Bachelor of Science in Computer Science</li>
+      </ul>
+
+      <h2>Program Highlights</h2>
+      <ul>
+        <li>Four-year degree programs with a broad interdisciplinary approach</li>
+        <li>Strong emphasis on leadership and civic engagement</li>
+        <li>Small class sizes to ensure personalized attention</li>
+        <li>Opportunities for internships and community-based research</li>
+        <li>Access to international exchange programs and partnerships</li>
+      </ul>
+
+      <h2>Admissions Requirements</h2>
+      <p>
+        Applicants must meet the university’s admission criteria, including academic qualifications, language proficiency, and other prerequisites. Please visit the Admissions section for detailed requirements and application deadlines.
+      </p>
+
+      <h2>Graduation and Career Support</h2>
+      <p>
+        AUW is dedicated to supporting graduates through career counseling, alumni networking, and leadership development programs. Our graduates are equipped to become change-makers in their communities and beyond.
+      </p>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <section class="footer-section">
+      <p>
+        The Asian University for Women is committed to academic excellence and social responsibility. To report any violations of the university’s policies, please use the
+        <a href="anonymous-complaint.html">anonymous complaint portal</a>.
+      </p>
+    </section>
+
+    <section class="footer-bar">
+      <div class="footer-links">
+        <a href="about.html">About</a><span>|</span>
+        <a href="apply.html">Apply</a><span>|</span>
+        <a href="career.html">Career Opportunities</a><span>|</span>
+        <a href="contact.html">Contact</a><span>|</span>
+        <a href="donate.html">Donate</a><span>|</span>
+        <a href="news.html">News</a>
+      </div>
+      <div class="footer-socials">
+        <i class="fab fa-facebook-f" title="Facebook"></i>
+        <i class="fab fa-twitter" title="Twitter"></i>
+        <i class="fab fa-youtube" title="YouTube"></i>
+        <i class="fab fa-linkedin-in" title="LinkedIn"></i>
+        <i class="fab fa-instagram" title="Instagram"></i>
+      </div>
+      <img src="auw-logo.png" alt="AUW Logo" />
+      <h3>Asian University for Women</h3>
+    </section>
+
+    <section class="footer-bottom">
+      <p>
+        &copy; 2025 Asian University for Women | All rights reserved |
+        <a href="privacy.html">Privacy Statement</a> | Mailing Address:
+        <a href="https://goo.gl/maps/..." target="_blank" rel="noopener noreferrer"
+          >Chittagong, Bangladesh</a
+        >
+      </p>
+      <p>
+        Website by Yelling Mule – Boston Web Design | Ransomware Protection
+      </p>
+    </section>
+  </footer>
+
+  <!-- FontAwesome CDN for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

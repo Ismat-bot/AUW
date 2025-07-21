@@ -1,12 +1,12 @@
 <?php
 // Connect to DB
 $host = '127.0.0.1';
-$user = 'root';
-$pass = '';  // Corrected: your password is empty string
-$db = 'auw';
+$db_user = 'root';
+$db_password = '';  // If your root has no password
+$db_name = 'auw';
 $port = 3307;
 
-$conn = new mysqli($host, $user, $pass, $db, $port);
+$conn = new mysqli($host, $db_user, $db_password, $db_name, $port);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
